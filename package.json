@@ -13,7 +13,7 @@
     "npm": ">=5"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/@dmitrydbelov"
   },
   "scripts": {
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
