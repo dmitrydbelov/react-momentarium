@@ -66,7 +66,7 @@ export default class Calendar extends Component {
         <table>
           <thead>
             <tr>
-              {moment.weekdaysShort().map((w, i) => <td key={i}>{w}</td>)}
+              {moment.localeData(m.locale()).weekdaysShort().map((w, i) => <td key={i}>{w}</td>)}
             </tr>
           </thead>
 
