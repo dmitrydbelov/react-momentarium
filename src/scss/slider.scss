@@ -30,7 +30,7 @@
       left: -($slider-size+$slider-fix)/2;
       width: $slider-size + $slider-fix;
       height: $slider-size + $slider-fix;
-      background-color: #fff;
+      background-color: $color-white;
       border: 3px solid $color-blue;
       border-radius: 50%;
       cursor: pointer;

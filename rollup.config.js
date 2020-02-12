@@ -1,7 +1,7 @@
 import babel from 'rollup-plugin-babel'
 import commonjs from 'rollup-plugin-commonjs'
 import external from 'rollup-plugin-peer-deps-external'
-import postcss from 'rollup-plugin-postcss'
+import bundleScss from 'rollup-plugin-bundle-scss';
 import sass from 'rollup-plugin-sass';
 import resolve from 'rollup-plugin-node-resolve'
 import url from 'rollup-plugin-url'
@@ -25,9 +25,13 @@ export default {
   ],
   plugins: [
     external(),
+    bundleScss({
+      output: 'styles.scss',
+    }),
     sass({
       output: 'dist/styles.css',
     }),
+
     url(),
     svgr(),
     babel({
@@ -36,5 +40,6 @@ export default {
     }),
     resolve(),
     commonjs()
-  ]
+  ],
+  external: ['moment']
 }

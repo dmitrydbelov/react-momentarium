@@ -1,10 +1,12 @@
 @import 'variables';
 
 .m-time {
+  display: flex;
   color: $color-white;
-  padding-top: 50px;
+  padding-top: 20px;
 
   .showtime {
+    width:100%;
     text-align: center;
   }
 
@@ -24,8 +26,8 @@
     left: -10px;
     font-size: 15px;
     color: $color-blue;
-    margin-top: 7px;
-    margin-bottom: 10px;
+    margin-top: 12px;
+    margin-bottom: 12px;
   }
 
   .sliders {
@@ -42,4 +44,26 @@
     border-radius: 3px;
     text-align: center;
   }
+}
+.analog{
+  width: 80px;
+    height: 80px;
+    display: inline-flex;
+    align-self: center;
+    margin-bottom: 20px;
+    border: 3px solid $color-blue;
+    border-radius: 12px;
+    text-align: center;
+  background-color: $color-white;
+
+  #clock{
+    fill: $color-white;
+  }
+  #face {
+	stroke-width: 3px; stroke: $color-white; 
+}
+#hour, #min, #sec {
+	stroke-width: 2px; fill: $color-blue; stroke: $color-blue;
+}
+#sec { stroke:$color-gray; }
 }
