@@ -1,6 +1,6 @@
 {
   "name": "react-momentarium",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React datetime picker powered by momentjs",
   "author": "dmitrydbelov",
   "license": "MIT",
@@ -57,17 +57,15 @@
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^2.0.6",
-    "rollup-plugin-url": "^1.4.0"
+    "rollup-plugin-url": "^1.4.0",
+    "rollup-plugin-sass": "^1.2.2",
+    "moment": "^2.24.0"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
-    "moment": "^2.24.0",
     "react-input-slider": "^5.1.4",
-    "react-simple-wheel-picker": "^1.0.4",
-    "react-uid": "^2.2.0",
-    "reactstrap": "^8.4.1",
-    "rollup-plugin-sass": "^1.2.2"
+    "react-uid": "^2.2.0"
   }
 }

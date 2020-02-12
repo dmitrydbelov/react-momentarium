@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 
 import ExampleComponent from 'react-momentarium'
+import moment from "moment"
+import 'moment/locale/ru';
+moment.locale("ru");
 
-import moment from 'moment'
 
 export default class App extends Component {
   constructor(props) {
@@ -14,6 +16,7 @@ export default class App extends Component {
   render() {
     return (
       <div style={{ margin: "auto" }}>
+        Locale:{moment.locale()}
         <ExampleComponent moment={this.state.m} onChange={() => { }} />
       </div>
     )

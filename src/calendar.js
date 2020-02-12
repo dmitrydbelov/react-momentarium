@@ -51,7 +51,6 @@ export default class Calendar extends Component {
       range(1, d3 + 1),
       range(1, 42 - d3 - d2 + 1)
     );
-    const weeks = moment.weekdaysShort();
 
     return (
       <div className={cx('m-calendar', this.props.className)}>
@@ -64,11 +63,10 @@ export default class Calendar extends Component {
             <i className={this.props.nextMonthIcon} />
           </button>
         </div>
-
         <table>
           <thead>
             <tr>
-              {weeks.map((w, i) => <td key={i}>{w}</td>)}
+              {moment.weekdaysShort().map((w, i) => <td key={i}>{w}</td>)}
             </tr>
           </thead>
 
