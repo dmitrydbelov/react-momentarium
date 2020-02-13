@@ -6,6 +6,7 @@ import sass from 'rollup-plugin-sass';
 import resolve from 'rollup-plugin-node-resolve'
 import url from 'rollup-plugin-url'
 import svgr from '@svgr/rollup'
+import copy from 'rollup-plugin-copy'
 
 import pkg from './package.json'
 
@@ -31,7 +32,11 @@ export default {
     sass({
       output: 'dist/styles.css',
     }),
-
+    copy({
+      targets: [
+        { src: 'src/scss/**.scss', dest: 'dist/scss' },
+      ]
+    }),
     url(),
     svgr(),
     babel({
