@@ -31,7 +31,7 @@
   }
 
   .sliders {
-    padding: 0 10px;
+    padding: 0 7px 25px 7px;
   }
 
   .time {
@@ -41,7 +41,7 @@
     font-size: 38px;
     line-height: 65px;
     background-color: $color-blue;
-    border-radius: 3px;
+    border-radius: 6px;
     text-align: center;
   }
 }
@@ -61,8 +61,20 @@
   }
 
   #clock path{
-    fill: $color-gray-dark; stroke: $color-blue;
+    fill: $color-gray-dark; 
+    stroke: $color-blue;
   }
+
+  #clock .hours {
+    fill: $color-blue; 
+    stroke: $color-blue;
+  }
+  #clock .mins {
+    fill: $color-blue; 
+    stroke: $color-blue;
+    opacity: .5;
+  }
+
 .hours , .mins  {
 	  stroke-width: 6px;
 }

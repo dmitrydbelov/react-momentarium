@@ -36,20 +36,20 @@
       font-size: 16px;
       padding: 7px;
       border: 1px solid $color-blue;
-      border-radius: 3px;
+      border-radius: 6px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
 
       &:first-child {
         border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
       }
 
       &:last-child {
         border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
       }
 
       &.is-active {
-        color: #ffffff;
+        color: $color-white;
         background-color: $color-blue;
       }
     }
@@ -70,12 +70,12 @@
 
   .btn-save {
     display: block;
-    margin-top: 10px;
+    margin-top: 20px;
     width: 100%;
     background-color: $color-blue;
     padding: 12px 0;
     text-align: center;
-    color: #ffffff;
+    color: $color-white;
     font-size: 16px;
     border-radius: 3px;
   }

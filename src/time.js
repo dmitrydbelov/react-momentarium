@@ -5,12 +5,12 @@ import moment from 'moment'
 
 function r(el, deg) {
   if (el) {
-    el.setAttribute('transform', 'rotate(' + deg + ' 217 217)');
+    el.setAttribute('transform', 'rotate(' + deg + ' 217.8 217.92)');
   }
 }
 function set(m, hour, min) {
   r(min, 6 * m.minutes())
-  r(hour, 30 * (m.hours() % 12) + m.minutes() / 2)
+  r(hour, (30 * (m.hours() % 12) + m.minutes() / 2) + 1)
 }
 export default class Time extends Component {
   constructor(props) {
@@ -117,14 +117,14 @@ export default class Time extends Component {
                     <path d="m218.59 204.68h-0.701c-6.814 0-12.5 5.686-12.5 12.5s5.686 12.5 12.5 12.5h0.701c6.814 0 12.5-5.686 12.5-12.5s-5.69-12.5-12.5-12.5z" />
                   </g>
 
-                  <g ref={this.hours} className="hours" >
-                    <path className="mins" d="m217.8 217.92v-112.31" />
-                    <path className="mins" d="m220.3 217.92v-112.32c0-3.224-5-3.224-5 0v112.32c0 3.23 5 3.23 5 0z" />
+                  <g ref={this.hours}  >
+                    <path className="hours" d="m217.8 217.92v-112" />
+                    <path className="hours" d="m220.3 217.92v-112c0-3.224-5-3.224-5 0v112c0 3.23 5 3.23 5 0z" />
                   </g>
 
-                  <g ref={this.mins} className="hours" >
-                    <path className="mins" d="m217.8 217.92v-112.31" />
-                    <path className="mins" d="m220.3 217.92v-112.32c0-3.224-5-3.224-5 0v112.32c0 3.23 5 3.23 5 0z" />
+                  <g ref={this.mins} >
+                    <path className="mins" d="m217.8 217.92v-150" />
+                    <path className="mins" d="m220.3 217.92v-150c0-3.224-5-3.224-5 0v150c0 3.23 5 3.23 5 0z" />
                   </g>
                 </g>
               </g >
