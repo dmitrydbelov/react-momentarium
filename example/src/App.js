@@ -17,7 +17,7 @@ export default class App extends Component {
     return (
       <div style={{ margin: "auto" }}>
         Locale:{moment.locale()}
-        <ExampleComponent moment={this.state.m} onChange={(m) => { this.setState({ m: m }) }} />
+        <ExampleComponent moment={this.state.m} onChange={(m) => { this.setState({ m: m }) }} onSave={() => { }} />
       </div>
     )
   }

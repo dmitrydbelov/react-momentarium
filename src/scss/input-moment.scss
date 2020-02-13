@@ -17,6 +17,9 @@
 }
 
 .m-input-moment {
+  font-size: 0.875rem;
+font-weight: 400;
+line-height: 1.5;
   display: inline-block;
   width: 330px;
   padding: 12px 15px;
@@ -65,12 +68,13 @@
   }
 
   .tabs {
+    display: block;
     margin-bottom: 11px;
   }
 
   .btn-save {
     display: block;
-    margin-top: 20px;
+    margin-top: 48px;
     width: 100%;
     background-color: $color-blue;
     padding: 12px 0;
