@@ -45,12 +45,8 @@ export default class Time extends Component {
     set(m, this.hours.current, this.mins.current);
     return (
       <div className={cx('m-time', this.props.className)}>
-
-
         <div className="showtime">
           <div className="analog">
-
-
             <svg id="clock" className="clock" rulerOrigin="0 0" viewOrigin="77.0449 696.6963" space="preserve" pageBounds="0 841.8896 595.2754 0" viewBox="0 0 434.869 434.87" overflow="visible">
               <g extraneous="self">
                 <g>

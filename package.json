@@ -1,6 +1,6 @@
 {
   "name": "react-momentarium",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "React datetime picker powered by momentjs",
   "author": "dmitrydbelov",
   "license": "MIT",
