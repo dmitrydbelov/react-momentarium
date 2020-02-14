@@ -1,32 +1,31 @@
 @import 'variables';
 
 .m-time {
-  display: flex;
-  color: $color-white;
+  display    : flex;
+  color      : $color-white;
   padding-top: 20px;
 
   .showtime {
-    width:100%;
+    width     : 100%;
     text-align: center;
   }
 
   .separater {
-    display: inline-block;
-    font-size: 32px;
+    display    : inline-block;
+    font-size  : 32px;
     font-weight: bold;
-    color: $color-blue;
-    width: 32px;
-    height: 65px;
+    color      : $color-blue;
+    width      : 32px;
+    height     : 65px;
     line-height: 65px;
-    text-align: center;
+    text-align : center;
   }
 
   .time-text {
-    position: relative;
-    font-size: 15px;
-    font-weight: bold;
-    color: $color-gray-dark;
-    margin-top: 12px;
+    position     : relative;
+    font-weight  : bold;
+    color        : $color-gray-dark;
+    margin-top   : 12px;
     margin-bottom: 12px;
   }
 
@@ -36,48 +35,63 @@
   }
 
   .time {
-    width: 65px;
-    height: 65px;
-    display: inline-block;
-    font-size: 38px;
-    line-height: 65px;
+    width           : 65px;
+    height          : 65px;
+    display         : inline-block;
+    font-size       : 38px;
+    line-height     : 65px;
     background-color: $color-blue;
-    border-radius: 6px;
-    text-align: center;
+    color:$color-white;
+    border-radius   : 6px;
+    text-align      : center;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin            : 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
   }
 }
-.analog{
-  width: 110px;
-    height: 110px;
-    display: inline-flex;
-    align-self: center;
-    margin-bottom: 20px;
-    text-align: center;
+
+.analog {
+  width           : 110px;
+  height          : 110px;
+  display         : inline-flex;
+  align-self      : center;
+  margin-bottom   : 20px;
+  text-align      : center;
   background-color: $color-white;
 
-  #clock{
-    width:100%;
+  #clock {
+    width : 100%;
     height: 100%;
-    fill: $color-blue;
+    fill  : $color-blue;
   }
 
-  #clock path{
-    fill: $color-gray-dark; 
+  #clock path {
+    fill  : $color-gray-dark;
     stroke: $color-blue;
   }
 
   #clock .hours {
-    fill: $color-blue; 
+    fill  : $color-blue;
     stroke: $color-blue;
   }
+
   #clock .mins {
-    fill: $color-blue; 
-    stroke: $color-blue;
+    fill   : $color-blue;
+    stroke : $color-blue;
     opacity: .5;
   }
 
-.hours , .mins  {
-	  stroke-width: 6px;
-}
+  .hours,
+  .mins {
+    stroke-width: 6px;
+  }
 
 }

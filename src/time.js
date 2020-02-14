@@ -2,6 +2,7 @@ import cx from 'classnames';
 import React, { Component } from 'react';
 import InputSlider from 'react-input-slider';
 import moment from 'moment'
+import { Input } from 'reactstrap';
 
 function r(el, deg) {
   if (el) {
@@ -33,6 +34,8 @@ export default class Time extends Component {
     set(m, this.hours.current, this.mins.current);
     this.props.onChange(m);
   };
+
+
 
 
 
@@ -129,11 +132,24 @@ export default class Time extends Component {
                 </g>
               </g >
             </svg >
-          </div></div>
+          </div>
+        </div>
         <div className="showtime">
-          <span className="time">{m.format('HH')}</span>
+          <Input type="number" min={0} max={23} className="time" value={m.format('HH')} onChange={e => {
+            e.preventDefault();
+            const m = this.props.moment;
+            m.hours(Number(e.target.value));
+            set(m, this.hours.current, this.mins.current);
+            this.props.onChange(m);
+          }} />
           <span className="separater">:</span>
-          <span className="time">{m.format('mm')}</span>
+          <Input type="number" className="time" min={0} max={59} value={m.format('mm')} onChange={e => {
+            e.preventDefault();
+            const m = this.props.moment;
+            m.minutes(Number(e.target.value));
+            set(m, this.hours.current, this.mins.current);
+            this.props.onChange(m);
+          }} />/>
         </div>
 
 

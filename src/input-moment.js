@@ -42,7 +42,7 @@ export default class InputMoment extends Component {
     const cls = cx('m-input-moment', className);
 
     return (
-      <div className={cls} {...props}>
+      <div className={cls} >
         <div className="options">
           <button
             type="button"

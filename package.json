@@ -1,6 +1,6 @@
 {
   "name": "react-momentarium",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "React datetime picker powered by momentjs",
   "author": "dmitrydbelov",
   "license": "MIT",
@@ -70,6 +70,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "react-input-slider": "^4.0.0",
-    "react-uid": "^2.2.0"
+    "react-uid": "^2.2.0",
+    "reactstrap": "^8.4.1"
   }
 }
