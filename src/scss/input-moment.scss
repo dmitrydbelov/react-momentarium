@@ -4,12 +4,12 @@
 @import 'slider';
 
 .im-btn {
-  display: inline-block;
+  display         : inline-block;
   background-color: $color-white;
-  border: 0;
-  outline: 0;
-  cursor: pointer;
-  line-height: 1;
+  border          : 0;
+  outline         : 0;
+  cursor          : pointer;
+  line-height     : 1;
 
   &:before {
     margin-right: 6px;
@@ -17,31 +17,31 @@
 }
 
 .m-input-moment {
-  font-size: 0.875rem;
-font-weight: 400;
-line-height: 1.5;
-  display: inline-block;
-  width: 330px;
-  padding: 12px 15px;
+  font-size    : 0.875rem;
+  font-weight  : 400;
+  line-height  : 1.5;
+  display      : inline-block;
+  width        : 330px;
+  padding      : 12px 15px;
   border-radius: 3px;
-  border: 1px solid $color-gray;
+  border       : 1px solid $color-gray;
 
   .options {
-    width: 100%;
-    display: inline-block;
+    width        : 100%;
+    display      : inline-block;
     margin-bottom: 4px;
 
     button {
-      float: left;
-      width: 50%;
-      color: $color-blue;
-      text-align: center;
-      font-size: 16px;
-      padding: 7px;
-      border: 1px solid $color-blue;
-      border-radius: 6px;
+      float                     : left;
+      width                     : 50%;
+      color                     : $color-blue;
+      text-align                : center;
+      font-size                 : 16px;
+      padding                   : 7px;
+      border                    : 1px solid $color-blue;
+      border-radius             : $corner-radius;
       border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0;
+      border-bottom-left-radius : 0;
 
       &:first-child {
         border-top-right-radius: 0;
@@ -52,7 +52,7 @@ line-height: 1.5;
       }
 
       &.is-active {
-        color: $color-white;
+        color           : $color-white;
         background-color: $color-blue;
       }
     }
@@ -60,7 +60,7 @@ line-height: 1.5;
 
   .tab {
     display: none;
-    height: 310px;
+    height : 310px;
 
     &.is-active {
       display: block;
@@ -68,19 +68,19 @@ line-height: 1.5;
   }
 
   .tabs {
-    display: block;
+    display      : block;
     margin-bottom: 11px;
   }
 
   .btn-save {
-    display: block;
-    margin-top: 40px;
-    width: 100%;
+    display         : block;
+    margin-top      : 40px;
+    width           : 100%;
     background-color: $color-blue;
-    padding: 12px 0;
-    text-align: center;
-    color: $color-white;
-    font-size: 16px;
-    border-radius: 3px;
+    padding         : 12px 0;
+    text-align      : center;
+    color           : $color-white;
+    font-size       : 16px;
+    border-radius   : $corner-radius;
   }
 }

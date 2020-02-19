@@ -32,7 +32,7 @@
   .sliders {
     padding: 0 7px 25px 7px;
     display: inline-block;
-    width: 100%;
+    width  : 100%;
   }
 
   .time {
@@ -42,7 +42,7 @@
     font-size       : 38px;
     line-height     : 65px;
     background-color: $color-blue;
-    color:$color-white;
+    color           : $color-white;
     border-radius   : 6px;
     text-align      : center;
   }

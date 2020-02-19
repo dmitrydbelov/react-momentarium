@@ -3,6 +3,7 @@ import moment from 'moment';
 import React, { Component } from 'react';
 import Calendar from './calendar';
 import Time from './time';
+import { Button } from 'reactstrap';
 
 
 export default class InputMoment extends Component {
@@ -78,13 +79,13 @@ export default class InputMoment extends Component {
         </div>
 
         {this.props.onSave ? (
-          <button
+          <Button
             type="button"
             className="im-btn btn-save"
             onClick={this.handleSave}
           >
             {this.props.children ? this.props.children : 'Save'}
-          </button>
+          </Button>
         ) : null}
       </div>
     );
