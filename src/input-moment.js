@@ -81,6 +81,7 @@ export default class InputMoment extends Component {
         {this.props.onSave ? (
           <Button
             type="button"
+            color="primary"
             className="im-btn btn-save"
             onClick={this.handleSave}
           >
