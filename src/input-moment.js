@@ -7,6 +7,11 @@ import { Button } from 'reactstrap';
 
 
 export default class InputMoment extends Component {
+  constructor(props) {
+    super(props);
+    this.onChange = this.onChange.bind(this);
+  }
+
   static defaultProps = {
     prevMonthIcon: 'ion-ios-arrow-left',
     nextMonthIcon: 'ion-ios-arrow-right',
