@@ -11,7 +11,8 @@ export default class InputMoment extends Component {
     prevMonthIcon: 'ion-ios-arrow-left',
     nextMonthIcon: 'ion-ios-arrow-right',
     minStep: 1,
-    hourStep: 1
+    hourStep: 1,
+    timePicker:true
   };
 
   state = {
@@ -27,6 +28,12 @@ export default class InputMoment extends Component {
     e.preventDefault();
     if (this.props.onSave) this.props.onSave();
   };
+  onChange(m) {
+    if (!this.props.timePicker) {
+      m.set({ hour: 0, minute: 0, second: 0, millisecond: 0 })
+    }
+    this.props.onChange(m);
+  }
 
   render() {
     const { tab } = this.state;
@@ -38,13 +45,14 @@ export default class InputMoment extends Component {
       minStep,
       hourStep,
       onSave,
+      timePicker,
       ...props
     } = this.props;
     const cls = cx('m-input-moment', className);
 
     return (
       <div className={cls} >
-        <div className="options">
+        {this.props.timePicker ? <div className="options">
           <button
             type="button"
             className={cx('ion-calendar im-btn', { 'is-active': tab === 0 })}
@@ -52,20 +60,20 @@ export default class InputMoment extends Component {
           >
             Date
           </button>
-          <button
+         <button
             type="button"
             className={cx('ion-clock im-btn', { 'is-active': tab === 1 })}
             onClick={e => this.handleClickTab(e, 1)}
           >
             Time
-          </button>
-        </div>
+          </button> 
+        </div>: null}
 
         <div className="tabs">
           <Calendar
             className={cx('tab', { 'is-active': tab === 0 })}
             moment={m}
-            onChange={this.props.onChange}
+            onChange={this.onChange}
             prevMonthIcon={this.props.prevMonthIcon}
             nextMonthIcon={this.props.nextMonthIcon}
           />
