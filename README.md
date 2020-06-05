@@ -15,12 +15,25 @@ npm install --save react-momentarium
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-momentarium'
+import ExampleComponent from 'react-momentarium'
+import moment from "moment"
+import 'moment/locale/ru';
+moment.locale("ru");
 
-class Example extends Component {
-  render () {
+
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      m: moment()
+    }
+  }
+  render() {
     return (
-      <MyComponent />
+      <div style={{ margin: "auto" }}>
+        Locale:{moment.locale()}
+        <ExampleComponent moment={this.state.m} onChange={(m) => { this.setState({ m: m }) }} onSave={() => { }} >...</ExampleComponent>
+      </div>
     )
   }
 }
@@ -28,4 +41,4 @@ class Example extends Component {
 
 ## License
 
-GPL © [dmitrydbelov](https://github.com/dmitrydbelov)
+MIT © [dmitrydbelov](https://github.com/dmitrydbelov)
