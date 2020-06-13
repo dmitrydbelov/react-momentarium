@@ -1,7 +1,7 @@
 import cx from 'classnames';
 import React, { Component } from 'react';
 import InputSlider from 'react-input-slider';
-import moment from 'moment'
+import moment from 'moment';
 import { Input } from 'reactstrap';
 
 function r(el, deg) {
@@ -10,8 +10,8 @@ function r(el, deg) {
   }
 }
 function set(m, hour, min) {
-  r(min, 6 * m.minutes())
-  r(hour, (30 * (m.hours() % 12) + m.minutes() / 2) + 1)
+  r(min, 6 * m.minutes());
+  r(hour, (30 * (m.hours() % 12) + m.minutes() / 2) + 1);
 }
 export default class Time extends Component {
   constructor(props) {
@@ -150,15 +150,7 @@ export default class Time extends Component {
 
 
         <div className="sliders">
-          <div className="time-text">Minutes:</div>
-          <InputSlider
-            className="u-slider-time"
-            xmin={0}
-            xmax={59}
-            xstep={this.props.minStep}
-            x={m.minute()}
-            onChange={this.changeMinutes}
-          />
+
 
           <div className="time-text">Hours:</div>
           <InputSlider
@@ -170,6 +162,15 @@ export default class Time extends Component {
             onChange={this.changeHours}
           />
 
+          <div className="time-text">Minutes:</div>
+          <InputSlider
+            className="u-slider-time"
+            xmin={0}
+            xmax={59}
+            xstep={this.props.minStep}
+            x={m.minute()}
+            onChange={this.changeMinutes}
+          />
         </div>
       </div>
     );
